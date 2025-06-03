@@ -1,3 +1,4 @@
 pandas==2.2.3
 scikit-learn==1.6.1
-torch==2.7.0
+#torch==2.7.0
+onnx==1.18.0
