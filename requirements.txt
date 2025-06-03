@@ -3,3 +3,6 @@ scikit-learn==1.6.1
 #torch==2.7.0
 onnx==1.18.0
 onnxruntime==1.22.0
+fastapi==0.115.12
+uvicorn==0.34.3
+pydantic==2.11.5
