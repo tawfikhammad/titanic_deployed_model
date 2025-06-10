@@ -1,0 +1,7 @@
+train.ipynb
+models/titanic_model.pth
+__pycache__/
+README.
+*.csv
+data/
+datasets/
