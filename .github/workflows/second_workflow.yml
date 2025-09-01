@@ -1,0 +1,24 @@
+name: second_workflow
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: building image
+        run: docker build -t tawfikhammad/titanic_repo:latest .
+
+      - name: Login to DockerHub
+        run: docker login -u tawfikhammad -p ${{ secrets.DOCKER_HUB_TOKEN }}
+
+      - name: Push to DockerHub
+        run: docker push tawfikhammad/titanic_repo:latest
